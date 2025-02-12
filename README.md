@@ -7,6 +7,9 @@
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=flat&logo=javascript&logoColor=%23F7DF1E)
 
 ![Portfolio Screenshot](./assets/images/screenshot.png)
+![Portfolio Screenshot](./assets/images/screenshot1.png)
+![Portfolio Screenshot](./assets/images/screenshot2.png)
+![Portfolio Screenshot](./assets/images/screenshot3.png)
 
 ## 🌟 Features
 
