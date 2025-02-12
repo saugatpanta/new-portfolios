@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saugat Panta - Software Developer</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&family=Inter:wght@300;500;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles/animations.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <!-- Add this in head section -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <div class="gradient-blob"></div>
+    
+    <main class="container">
+        <!-- Navigation -->
+        <nav class="bottom-nav">
+            <a href="#home" class="nav-item active" data-section="home">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </a>
+            <a href="#about" class="nav-item" data-section="about">
+                <i class="fas fa-user"></i>
+                <span>About</span>
+            </a>
+            <a href="#education" class="nav-item" data-section="education">
+                <i class="fas fa-graduation-cap"></i>
+                <span>Education</span>
+            </a>
+            <a href="#skills" class="nav-item" data-section="skills">
+                <i class="fas fa-code"></i>
+                <span>Skills</span>
+            </a>
+        </nav>
+
+        <!-- Home Section -->
+        <section id="home" class="section active">
+            <div class="hero">
+                <div class="profile-container">
+                    <img src="assets/images/profile.jpg" alt="Saugat Panta" class="profile-img">
+                </div>
+                <div class="hero-content">
+                    <h1 class="title-gradient">Saugat Panta</h1>
+                    <p class="subtitle">Software Developer</p>
+                </div>
+                <div class="cta-buttons">
+                    <button class="hire-btn" onclick="showContactModal()">Hire Me</button>
+                    <button class="download-btn" onclick="generatePDF()">
+                        <i class="fas fa-download"></i> Download Portfolio
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <p class="about-text">
+                    Passionate Full Stack Developer with expertise in modern web technologies. 
+                    Currently pursuing BCSIT at Apex College, I specialize in building scalable 
+                    applications using React, Node.js, and Python. My development philosophy 
+                    centers around clean code architecture and user-centric design.
+                </p>
+                <div class="achievements">
+                    <div class="achievement-card">
+                        <i class="fas fa-layer-group"></i>
+                        <h3>Full Stack Projects</h3>
+                        <p>15+ completed projects using MERN stack</p>
+                    </div>
+                    <div class="achievement-card">
+                        <i class="fas fa-rocket"></i>
+                        <h3>Cloud Solutions</h3>
+                        <p>Deployed 20+ applications on AWS & Firebase</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="section">
+            <h2 class="section-title">Education</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Jugal English Medium School</h3>
+                        <p>Nursery - Class 6</p>
+                        <span>2008 - 2017</span>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Himsheela Boarding School</h3>
+                        <p>Class 7 - 10</p>
+                        <span>2018 - 2021 | GPA: 3.60</span>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Reliance International Academy</h3>
+                        <p>Class 11 - 12</p>
+                        <span>2022 - 2024 | GPA: 3.27/3.49</span>
+                    </div>
+                </div>
+                <div class="timeline-item current">
+                    <div class="timeline-content">
+                        <h3>Apex College</h3>
+                        <p>BCSIT (First Semester)</p>
+                        <span>2024 - Present</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <img src="assets/icons/frontend.svg" alt="Frontend">
+                    <h3>Frontend Development</h3>
+                    <p>React, HTML5, CSS3, JavaScript (ES6+)</p>
+                </div>
+                <div class="skill-card">
+                    <img src="assets/icons/backend.svg" alt="Backend">
+                    <h3>Backend Development</h3>
+                    <p>Node.js, Express, MongoDB, REST APIs</p>
+                </div>
+                <div class="skill-card">
+                    <img src="assets/icons/python.svg" alt="Python">
+                    <h3>Python Programming</h3>
+                    <p>Django, Flask, Data Analysis</p>
+                </div>
+                <div class="skill-card">
+                    <img src="assets/icons/java.svg" alt="Java">
+                    <h3>Java Development</h3>
+                    <p>Spring Boot, Android Basics</p>
+                </div>
+                <div class="skill-card">
+                    <img src="assets/icons/react.svg" alt="React">
+                    <h3>React JavaScript</h3>
+                    <p>Web, Mobile, and Desktop Applications</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Modal -->
+        <div class="contact-modal" id="contactModal">
+            <div class="contact-content">
+                <span class="close-btn" onclick="hideContactModal()">&times;</span>
+                <h2>Let's Connect!</h2>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/form-handler.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+</body>
+</html>
