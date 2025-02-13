@@ -36,7 +36,7 @@
 
 - **Frontend**: HTML5, CSS3, JavaScript (ES6+)
 - **PDF Generation**: [jsPDF](https://parall.ax/products/jspdf)
-- **Form Handling**: Google Apps Script, Formspree
+- **Form Handling**: Formspree
 - **Icons**: Font Awesome
 - **Animations**: Custom CSS animations
 
