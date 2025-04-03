@@ -653,3 +653,6 @@ input:focus, textarea:focus {
         transform: translateY(0);
     }
 }
+.skills-list{
+    style : none;    
+}
