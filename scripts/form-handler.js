@@ -11,7 +11,7 @@ form.addEventListener('submit', async (e) => {
 
     try {
          // Email Integration
-        await fetch('https://formspree.io/f/xjkgeawr', {
+        await fetch('https://formspree.io/f/mwpoyvab', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
